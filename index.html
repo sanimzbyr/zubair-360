@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zubair 360 — Your Trusted Tech Guy | Custom Websites For North American Small Businesses</title>
+  <meta name="description" content="Custom websites that actually grow your business—without paying for a fancy agency's espresso machine. 6 years of software engineering experience, 100% plain English, direct 1-on-1 on WhatsApp.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FDFBF7',
+              100: '#FAF7F0',
+              200: '#F3EFE6',
+              300: '#E8E1D3',
+            },
+            forest: {
+              900: '#0E2922',
+              800: '#143830',
+              700: '#1A4D42',
+              600: '#236558',
+              500: '#2E7D6E',
+              100: '#E4F1EE',
+              50: '#F0F7F5',
+            },
+            mustard: {
+              600: '#C98D10',
+              500: '#E5A823',
+              400: '#F2BD48',
+              100: '#FEF6E4',
+              50: '#FFFBF2',
+            },
+            charcoal: {
+              900: '#1A211E',
+              800: '#252F2B',
+              700: '#3D4A45',
+              600: '#5C6A65',
+              500: '#7E8C87',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+          },
+          boxShadow: {
+            'warm': '0 10px 30px -5px rgba(26, 77, 66, 0.08), 0 4px 12px -2px rgba(229, 168, 35, 0.06)',
+            'card': '0 8px 24px -4px rgba(20, 56, 48, 0.06)',
+            'float': '0 20px 40px -10px rgba(20, 56, 48, 0.12)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom styling matching the exact aesthetic */
+    body {
+      background-color: #FAF7F0;
+      color: #1A211E;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+
+    /* Dashed curved stroke for hero graphic */
+    .dashed-arrow-path {
+      stroke-dasharray: 6 6;
+      animation: dashMove 30s linear infinite;
+    }
+
+    @keyframes dashMove {
+      to {
+        stroke-dashoffset: -100;
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5D1;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1A4D42;
+    }
+  </style>
+</head>
+<body class="selection:bg-mustard-400 selection:text-forest-900">
+
+  <!-- ===================================================================
+       1. NAVIGATION BAR
+       Matches header in reference: Logo left, Pill/Parentheses nav items, Forest green CTA button
+       =================================================================== -->
+  <header class="sticky top-0 z-50 bg-[#FAF7F0]/90 backdrop-blur-md border-b border-cream-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="group flex items-center gap-2">
+        <div class="flex items-center text-2xl font-extrabold tracking-tight text-forest-800">
+          <span class="text-forest-700">Z</span>ubair<span class="text-mustard-500 font-black">360</span><span class="text-forest-700">.</span>
+        </div>
+        <span class="hidden sm:inline-block text-xs font-semibold uppercase tracking-wider text-charcoal-500 border-l border-cream-300 pl-2.5 py-0.5">
+          Your trusted tech guy
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-charcoal-700">
+        <a href="#how-i-help" class="px-3.5 py-1.5 rounded-full hover:text-forest-800 hover:bg-cream-200/70 transition-colors">
+          What I Do
+        </a>
+        <a href="#why-me" class="px-3.5 py-1.5 rounded-full hover:text-forest-800 hover:bg-cream-200/70 transition-colors">
+          Why Me?
+        </a>
+        <a href="#promises" class="px-3.5 py-1.5 rounded-full hover:text-forest-800 hover:bg-cream-200/70 transition-colors">
+          Sweet Perks
+        </a>
+        <a href="#pricing" class="px-3.5 py-1.5 rounded-full hover:text-forest-800 hover:bg-cream-200/70 transition-colors">
+          Pricing
+        </a>
+        <a href="#faq" class="px-3.5 py-1.5 rounded-full hover:text-forest-800 hover:bg-cream-200/70 transition-colors">
+          FAQ
+        </a>
+      </nav>
+
+      <!-- Right Header CTA (Forest Green Button matching the reference) -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/1234567890?text=Hi!%20I%20saw%20your%20website%20and%20would%20love%20to%20chat%20about%20a%20custom%20website." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition-all duration-200 transform hover:-translate-y-0.5">
+          <!-- WhatsApp Icon -->
+          <svg class="w-4 h-4 fill-current text-emerald-300" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-forest-800 hover:bg-cream-200 focus:outline-none" aria-label="Toggle Menu">
+        <svg id="menuOpenIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="menuCloseIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#FAF7F0] border-b border-cream-200 px-6 py-5 space-y-3">
+      <a href="#how-i-help" class="mobile-link block text-base font-medium text-charcoal-800 py-1">What I Do</a>
+      <a href="#why-me" class="mobile-link block text-base font-medium text-charcoal-800 py-1">Why Me?</a>
+      <a href="#promises" class="mobile-link block text-base font-medium text-charcoal-800 py-1">Sweet Perks</a>
+      <a href="#pricing" class="mobile-link block text-base font-medium text-charcoal-800 py-1">Pricing</a>
+      <a href="#faq" class="mobile-link block text-base font-medium text-charcoal-800 py-1">FAQ</a>
+      <div class="pt-3 border-t border-cream-200">
+        <a href="https://wa.me/1234567890?text=Hi!%20I%20saw%20your%20website%20and%20would%20love%20to%20chat%20about%20a%20custom%20website." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="flex items-center justify-center gap-2 w-full bg-forest-700 text-white font-semibold py-3 rounded-lg shadow">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ===================================================================
+       2. HERO SECTION
+       Faithfully replicates the uploaded visual design:
+       - Greeting "Hy! I Am / John Deo." -> "Hy! I Am / Zubair." with mustard yellow name
+       - Dotted curved connecting arrow line
+       - Yellow-bordered circular portrait
+       - Right quote "I design beautifully simple things, and I love what i do."
+       - Floating "Reviews" badge with stars & rating
+       - Left stat counter "06 YEARS EXPERIENCE"
+       - Social icons bottom left
+       - Right bottom signature "Your Trusted / Tech Guy."
+       =================================================================== -->
+  <section class="relative pt-6 pb-20 md:pt-10 md:pb-28 overflow-hidden">
+    
+    <!-- Top Eyebrow Pill -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
+      <div class="inline-flex items-center gap-2 bg-cream-200/90 border border-cream-300/80 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-forest-800 shadow-sm">
+        <span>👋</span>
+        <span>Your Trusted Tech Guy — 6 Years of Making Business Owners Look Awesome Online</span>
+      </div>
+      
+      <!-- Big Headline that speaks directly to SMB owners -->
+      <h1 class="mt-4 max-w-4xl mx-auto text-3xl sm:text-5xl lg:text-6xl font-extrabold text-forest-900 tracking-tight leading-[1.15]">
+        Custom Websites That Actually Grow Your Business—<span class="text-forest-700">Without Paying for a Fancy Agency's Espresso Machine.</span>
+      </h1>
+      
+      <!-- Friendly, conversational sub-headline -->
+      <p class="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-charcoal-600 leading-relaxed">
+        Hi! I help North American business owners look amazing online without the headache. 
+        I have spent the last 6 years as a software engineer building custom websites from the ground up. 
+        You talk directly to me, I speak plain English, and I handle everything from start to finish.
+      </p>
+
+      <!-- Dual Call to Action Buttons -->
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-4">
+        <a href="https://wa.me/1234567890?text=Hi!%20I%20saw%20your%20website%20and%20would%20love%20to%20chat%20about%20a%20custom%20website." 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2.5 bg-forest-700 hover:bg-forest-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5">
+          <svg class="w-5 h-5 fill-current text-emerald-300" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="#why-me" 
+           class="inline-flex items-center gap-2 bg-white hover:bg-cream-100 text-forest-800 font-semibold px-6 py-3.5 rounded-xl border border-cream-300 shadow-sm hover:shadow transition-all duration-200">
+          <span>See Why Clients Love Me</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Small Reassuring Trust Note -->
+      <p class="mt-3 text-xs sm:text-sm text-charcoal-500 font-medium">
+        ✨ No pushy sales calls. No confusing contracts. Just a friendly guy who is really good at building websites.
+      </p>
+    </div>
+
+    <!-- MAIN VISUAL STAGE (Exact Layout Composition from Reference Picture) -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+      <div class="relative min-h-[460px] md:min-h-[500px] flex items-center justify-center">
+
+        <!-- ================= LEFT SIDE OF HERO ================= -->
+        <div class="absolute left-2 sm:left-6 top-4 sm:top-10 z-20 max-w-[240px] text-left">
+          <!-- "Hy! I Am Zubair." -->
+          <div class="space-y-1">
+            <span class="block text-2xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">
+              Hy! I Am
+            </span>
+            <span class="block text-3xl sm:text-5xl font-black text-mustard-500 tracking-tight">
+              Zubair.
+            </span>
+          </div>
+
+          <!-- Experience Counter (Matches 08 YEARS EXPERIENCE in photo -> 06 for Zubair) -->
+          <div class="mt-16 sm:mt-24 flex items-center gap-3">
+            <span class="text-4xl sm:text-5xl font-black text-forest-700 tracking-tight">
+              06
+            </span>
+            <div class="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-forest-900 leading-tight">
+              Years<br>Experience
+            </div>
+          </div>
+
+          <!-- Social Icons (Matches reference bottom left) -->
+          <div class="mt-6 flex items-center gap-4 text-mustard-500">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/1234567890?text=Hi!%20I%20saw%20your%20website%20and%20would%20love%20to%20chat%20about%20a%20custom%20website." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               title="WhatsApp" 
+               class="w-8 h-8 rounded-full bg-cream-200 hover:bg-mustard-500 hover:text-white flex items-center justify-center transition-all duration-200">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="w-8 h-8 rounded-full bg-cream-200 hover:bg-mustard-500 hover:text-white flex items-center justify-center transition-all duration-200">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:hello@zubair360.com" title="Email Me" class="w-8 h-8 rounded-full bg-cream-200 hover:bg-mustard-500 hover:text-white flex items-center justify-center transition-all duration-200">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ================= SVOOPING DASHED ARROW SVG ================= -->
+        <!-- Matches the hand-drawn curved teal arrow pointing from text to portrait -->
+        <div class="hidden sm:block absolute left-[22%] top-[32%] w-48 h-32 pointer-events-none z-10">
+          <svg viewBox="0 0 180 120" fill="none" class="w-full h-full text-forest-600">
+            <path d="M 10 100 C 20 20, 100 10, 170 30" 
+                  stroke="currentColor" 
+                  stroke-width="2.5" 
+                  stroke-linecap="round"
+                  class="dashed-arrow-path"/>
+            <!-- Arrow tip -->
+            <path d="M 12 92 L 10 102 L 20 103" 
+                  stroke="currentColor" 
+                  stroke-width="2.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- ================= CENTER CIRCULAR PORTRAIT ================= -->
+        <div class="relative z-10 my-6">
+          <!-- Circular Frame with warm yellow ring & soft glow -->
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full p-2.5 bg-gradient-to-tr from-mustard-400 to-mustard-500 shadow-2xl">
+            <div class="w-full h-full rounded-full overflow-hidden bg-cream-100 border-4 border-[#FAF7F0] relative">
+              <img src="avatar.jpg" 
+                   alt="Zubair - Your Trusted Tech Guy" 
+                   class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='hero-reference.jpg';">
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= RIGHT SIDE OF HERO ================= -->
+        <div class="absolute right-2 sm:right-6 top-6 sm:top-12 z-20 max-w-[260px] text-right">
+          <!-- Philosophy quote -->
+          <p class="text-xs sm:text-sm text-charcoal-700 font-medium leading-relaxed italic">
+            "I design beautifully simple things,<br class="hidden sm:inline">and I love what I do."
+          </p>
+
+          <!-- Floating Reviews Card (Matches the reference widget) -->
+          <div class="mt-14 sm:mt-20 inline-block text-left bg-white/95 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-float border border-cream-200">
+            <div class="flex items-center justify-between gap-3 text-xs font-bold text-charcoal-800 mb-1.5">
+              <span>Client Reviews</span>
+              <!-- 5 Mustard Stars -->
+              <div class="flex text-mustard-500 text-xs">
+                ★★★★★
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <!-- Avatar Stack -->
+              <div class="flex -space-x-2">
+                <span class="inline-block w-7 h-7 rounded-full ring-2 ring-white bg-forest-600 text-white text-[10px] font-bold flex items-center justify-center">JD</span>
+                <span class="inline-block w-7 h-7 rounded-full ring-2 ring-white bg-mustard-500 text-white text-[10px] font-bold flex items-center justify-center">SM</span>
+                <span class="inline-block w-7 h-7 rounded-full ring-2 ring-white bg-emerald-600 text-white text-[10px] font-bold flex items-center justify-center">MK</span>
+                <span class="inline-block w-7 h-7 rounded-full ring-2 ring-white bg-charcoal-700 text-white text-[10px] font-bold flex items-center justify-center">RL</span>
+              </div>
+              <div class="text-sm font-extrabold text-charcoal-900">
+                4.9 <span class="text-[10px] font-normal text-charcoal-500">/ 5.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Handwritten Script Signature (Matches "Creative Designer." in reference) -->
+          <div class="mt-12 sm:mt-16 text-right">
+            <span class="block font-script text-3xl sm:text-4xl text-forest-700 -rotate-3 leading-none">
+              Your Trusted
+            </span>
+            <span class="block text-lg sm:text-xl font-bold tracking-tight text-forest-900 mt-1">
+              Tech Guy.
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Trust Badges Bar (Direct, no fluff) -->
+    <div class="mt-12 max-w-5xl mx-auto px-4">
+      <div class="bg-white/70 backdrop-blur-sm border border-cream-300 rounded-2xl p-4 sm:p-5 shadow-sm">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-y md:divide-y-0 md:divide-x divide-cream-200">
+          <div class="pt-2 md:pt-0">
+            <div class="text-forest-700 font-extrabold text-lg">6+ Years</div>
+            <div class="text-xs text-charcoal-600 font-medium">Software Engineering</div>
+          </div>
+          <div class="pt-2 md:pt-0">
+            <div class="text-forest-700 font-extrabold text-lg">100% Plain English</div>
+            <div class="text-xs text-charcoal-600 font-medium">Zero Confusing Nerd-Speak</div>
+          </div>
+          <div class="pt-2 md:pt-0">
+            <div class="text-forest-700 font-extrabold text-lg">Solo Advantage</div>
+            <div class="text-xs text-charcoal-600 font-medium">From Bangladesh (No Overhead)</div>
+          </div>
+          <div class="pt-2 md:pt-0">
+            <div class="text-forest-700 font-extrabold text-lg">Direct 1-on-1</div>
+            <div class="text-xs text-charcoal-600 font-medium">Chat Directly on WhatsApp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===================================================================
+       3. ABOUT ME: "THE ELEPHANT IN THE ROOM"
+       Big Agency Quality. Solo-Guy Prices. Zero Corporate Nonsense.
+       =================================================================== -->
+  <section id="why-me" class="py-20 bg-cream-100 border-y border-cream-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-mustard-600 bg-mustard-50 px-3.5 py-1 rounded-full border border-mustard-100">
+          The Elephant in the Room
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 tracking-tight">
+          Big Agency Quality. Solo-Guy Prices. Zero Corporate Nonsense.
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-charcoal-700 leading-relaxed">
+          Let’s be honest: hiring a traditional American web agency is exhausting. You pay thousands of dollars to cover their downtown office rent, their sales team's commissions, and their office ping-pong table—only for your actual website to be handed off to an intern who forgets your name.
+        </p>
+      </div>
+
+      <!-- 3 Key Value Cards -->
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-7 border border-cream-300 shadow-warm relative overflow-hidden group hover:border-forest-600 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center font-black text-xl mb-5 group-hover:bg-forest-700 group-hover:text-white transition-colors duration-300">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-forest-900">
+            6 Years of Senior-Level Craftsmanship
+          </h3>
+          <p class="mt-3 text-sm text-charcoal-600 leading-relaxed">
+            I don’t slap together flimsy templates that fall apart next month. You get six solid years of professional engineering experience poured directly into making your website lightning-fast and rock-solid.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-7 border border-cream-300 shadow-warm relative overflow-hidden group hover:border-mustard-500 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-mustard-50 text-mustard-600 flex items-center justify-center font-black text-xl mb-5 group-hover:bg-mustard-500 group-hover:text-white transition-colors duration-300">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-forest-900">
+            Direct 1-on-1 Contact with Zubair
+          </h3>
+          <p class="mt-3 text-sm text-charcoal-600 leading-relaxed">
+            No account managers. No automated support tickets. No junior middlemen playing telephone. The person answering your WhatsApp messages is the exact same guy writing every line of code for your business.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-7 border border-cream-300 shadow-warm relative overflow-hidden group hover:border-forest-600 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl bg-forest-50 text-forest-700 flex items-center justify-center font-black text-xl mb-5 group-hover:bg-forest-700 group-hover:text-white transition-colors duration-300">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-forest-900">
+            A Fraction of What Agencies Charge
+          </h3>
+          <p class="mt-3 text-sm text-charcoal-600 leading-relaxed">
+            I run my independent studio from Bangladesh. Since I don't pay \$8,000/month for shiny North American office rent, I pass 100% of those massive savings directly to your bottom line.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Time Zone Magic Feature: Live Clock & Explanation -->
+      <div class="mt-14 bg-gradient-to-br from-forest-800 to-forest-900 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden">
+        <!-- Background decorative wave -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-forest-700/30 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 bg-forest-700/60 border border-forest-600 px-3.5 py-1 rounded-full text-xs font-semibold text-emerald-300 mb-4">
+              <span>☕</span>
+              <span>The "Overnight Magic" Advantage</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold leading-tight">
+              You Sleep in North America. I Build in Bangladesh. You Wake Up to Fresh Progress.
+            </h3>
+            <p class="mt-4 text-cream-200 text-sm sm:text-base leading-relaxed">
+              Because I am based in Bangladesh, our working hours overlap conveniently during your morning and evening. While you are sleeping or spending time with family, I am fueled by strong tea turning your checklist into reality. You wake up with your morning coffee and see real progress waiting in your inbox!
+            </p>
+          </div>
+
+          <!-- Interactive Time Zone Widget -->
+          <div class="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10">
+            <div class="text-xs font-bold uppercase tracking-wider text-mustard-400 mb-3 text-center">
+              Live Global Collaboration Clocks
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-center">
+              <!-- Clock 1: North America (Eastern) -->
+              <div class="bg-forest-900/80 rounded-xl p-3 border border-forest-700/50">
+                <div class="text-xs text-cream-300 font-medium">USA / Canada (ET)</div>
+                <div id="usClock" class="text-xl sm:text-2xl font-black text-white mt-1">--:-- --</div>
+                <div class="text-[11px] text-emerald-300 mt-0.5">Your Day & Rest</div>
+              </div>
+              <!-- Clock 2: Bangladesh -->
+              <div class="bg-forest-900/80 rounded-xl p-3 border border-forest-700/50">
+                <div class="text-xs text-cream-300 font-medium">Dhaka, Bangladesh</div>
+                <div id="bdClock" class="text-xl sm:text-2xl font-black text-mustard-400 mt-1">--:-- --</div>
+                <div class="text-[11px] text-mustard-300 mt-0.5">Overnight Build Mode</div>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="inline-block text-xs text-cream-200 bg-forest-800/80 px-3 py-1 rounded-full">
+                ✨ Shared overlap hours every morning & evening for easy WhatsApp chatting
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       4. SERVICES SECTION: "WHAT I DO FOR YOU"
+       Everything You Need to Look Great Online (While You Focus on Your Actual Job)
+       =================================================================== -->
+  <section id="how-i-help" class="py-20 bg-[#FAF7F0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-forest-700 bg-forest-50 px-3.5 py-1 rounded-full border border-forest-100">
+          How I Can Help
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 tracking-tight">
+          Everything You Need to Look Great Online<br class="hidden sm:inline">
+          <span class="text-forest-700 font-normal text-2xl sm:text-3xl block mt-1">(While You Focus on Your Actual Job)</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-charcoal-700">
+          No complicated packages, no confusing options. Just high-impact work that brings in more customers.
+        </p>
+      </div>
+
+      <!-- 4 Services Cards -->
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm hover:shadow-float transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cream-200 text-forest-700 flex items-center justify-center text-2xl mb-6 shadow-sm">
+              🔨
+            </div>
+            <h3 class="text-2xl font-bold text-forest-900">
+              Custom Business Websites (Built From Scratch)
+            </h3>
+            <p class="mt-3 text-charcoal-600 leading-relaxed text-sm sm:text-base">
+              No cookie-cutter templates that look like three of your local competitors. I build a welcoming, lightning-fast, easy-to-use website tailored specifically to your personality and services that turns curious visitors into paying customers.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-charcoal-700 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Designed to look fantastic on iPhones, Androids, tablets, & computers
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Clear calls to action so customers immediately call, text, or book
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Loads instantly without annoying lag or clutter
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-5 border-t border-cream-200">
+            <a href="https://wa.me/1234567890?text=Hi!%20I'm%20interested%20in%20a%20Brand%20New%20Website%20built%20from%20scratch." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-forest-700 hover:text-forest-900 font-bold text-sm inline-flex items-center gap-1.5 group">
+              <span>Ask Zubair about a new website on WhatsApp</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm hover:shadow-float transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-mustard-100 text-mustard-600 flex items-center justify-center text-2xl mb-6 shadow-sm">
+              ✨
+            </div>
+            <h3 class="text-2xl font-bold text-forest-900">
+              The "Stop Being Embarrassed by Your Website" Makeover
+            </h3>
+            <p class="mt-3 text-charcoal-600 leading-relaxed text-sm sm:text-base">
+              Afraid to hand out your business card because your current website looks clunky or was built a decade ago? I will rescue your old site and transform it into a fresh, modern, trustworthy storefront you will actually feel proud to show off.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-charcoal-700 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Complete visual polish that elevates your prices & credibility
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Fix broken buttons, wonky mobile layouts, and outdated text
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Keep everything that worked while throwing out the 2012 look
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-5 border-t border-cream-200">
+            <a href="https://wa.me/1234567890?text=Hi!%20My%20current%20website%20needs%20a%20makeover.%20Can%20you%20help?" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-forest-700 hover:text-forest-900 font-bold text-sm inline-flex items-center gap-1.5 group">
+              <span>Send me your current site for a free makeover check</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm hover:shadow-float transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-6 shadow-sm">
+              📅
+            </div>
+            <h3 class="text-2xl font-bold text-forest-900">
+              Effortless Booking & Quote Requests
+            </h3>
+            <p class="mt-3 text-charcoal-600 leading-relaxed text-sm sm:text-base">
+              Let your website do the administrative heavy lifting while you're busy on a job site, with patients, or baking. I set up simple, one-tap ways for your customers to book appointments, request quotes, or message you directly.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-charcoal-700 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Friction-free quote forms sent straight to your phone & email
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Direct WhatsApp or phone call buttons right at thumb reach
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Simple calendar booking sync with no complicated accounts
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-5 border-t border-cream-200">
+            <a href="https://wa.me/1234567890?text=Hi!%20I%20want%20to%20set%20up%20easy%20booking%20and%20quote%20requests." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-forest-700 hover:text-forest-900 font-bold text-sm inline-flex items-center gap-1.5 group">
+              <span>Chat about automated bookings on WhatsApp</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm hover:shadow-float transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-2xl mb-6 shadow-sm">
+              🚀
+            </div>
+            <h3 class="text-2xl font-bold text-forest-900">
+              The "I Don't Want to Touch Anything" Setup
+            </h3>
+            <p class="mt-3 text-charcoal-600 leading-relaxed text-sm sm:text-base">
+              Don't know how web addresses, internet hosting, or security certificates work? Good—you shouldn't have to! You focus on running your business, and I handle all the technical nuts and bolts so you never have to Google a single thing at 2 AM.
+            </p>
+            <ul class="mt-6 space-y-2.5 text-sm text-charcoal-700 font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Total setup of domain address, fast hosting, & security lock
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> 100% full ownership handed over to you—no recurring hostage fees
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="text-mustard-500 font-bold">✓</span> Everything tested and ready to launch without any headache
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-5 border-t border-cream-200">
+            <a href="https://wa.me/1234567890?text=Hi!%20I%20just%20want%20a%20hands-off%20website%20launch%20handled%20for%20me." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-forest-700 hover:text-forest-900 font-bold text-sm inline-flex items-center gap-1.5 group">
+              <span>Tell Zubair to handle it all on WhatsApp</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       5. WHY WORK WITH ME? (SOLO PARTNER VS. BIG AGENCY COMPARISON)
+       An Honest, Fun & Clear Breakdown
+       =================================================================== -->
+  <section class="py-20 bg-cream-100 border-y border-cream-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-mustard-600 bg-mustard-50 px-3.5 py-1 rounded-full border border-mustard-100">
+          The Solo Advantage
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 tracking-tight">
+          Fancy Downtown Agency vs. Your Trusted Tech Guy
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-charcoal-700">
+          Why busy North American business owners are ditching high-overhead firms for direct partnership.
+        </p>
+      </div>
+
+      <!-- Comparison Table Component -->
+      <div class="mt-14 max-w-4xl mx-auto bg-white rounded-3xl border border-cream-300 shadow-warm overflow-hidden">
+        
+        <!-- Table Header -->
+        <div class="grid grid-cols-12 bg-cream-200/80 p-5 text-sm sm:text-base font-bold border-b border-cream-300 text-charcoal-800">
+          <div class="col-span-4 sm:col-span-3 text-charcoal-600">The Category</div>
+          <div class="col-span-4 sm:col-span-4 text-charcoal-500 font-medium">Typical Big Agency</div>
+          <div class="col-span-4 sm:col-span-5 text-forest-800 font-extrabold flex items-center gap-1.5">
+            <span class="text-mustard-500">★</span> Zubair (Your Tech Guy)
+          </div>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="grid grid-cols-12 p-5 text-xs sm:text-sm border-b border-cream-200 items-center hover:bg-cream-50/50 transition-colors">
+          <div class="col-span-4 sm:col-span-3 font-bold text-forest-900">
+            Who You Talk To
+          </div>
+          <div class="col-span-4 sm:col-span-4 text-charcoal-600 pr-2">
+            A smooth-talking salesperson, then an account manager, then an intern who forgets your project.
+          </div>
+          <div class="col-span-4 sm:col-span-5 text-forest-800 font-semibold bg-forest-50/60 p-2.5 rounded-xl border border-forest-100">
+            Just me, Zubair! The exact same software engineer building your website.
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid grid-cols-12 p-5 text-xs sm:text-sm border-b border-cream-200 items-center hover:bg-cream-50/50 transition-colors">
+          <div class="col-span-4 sm:col-span-3 font-bold text-forest-900">
+            How We Speak
+          </div>
+          <div class="col-span-4 sm:col-span-4 text-charcoal-600 pr-2">
+            "Synergistic omnichannel paradigm shifts" (confusing buzzwords to make things sound complicated).
+          </div>
+          <div class="col-span-4 sm:col-span-5 text-forest-800 font-semibold bg-forest-50/60 p-2.5 rounded-xl border border-forest-100">
+            100% Plain English. If I use a single confusing buzzword, you can virtually throw a shoe at me!
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="grid grid-cols-12 p-5 text-xs sm:text-sm border-b border-cream-200 items-center hover:bg-cream-50/50 transition-colors">
+          <div class="col-span-4 sm:col-span-3 font-bold text-forest-900">
+            Where Your Money Goes
+          </div>
+          <div class="col-span-4 sm:col-span-4 text-charcoal-600 pr-2">
+            Downtown city rent, sales commissions, fancy espresso machines, and corporate ping-pong tables.
+          </div>
+          <div class="col-span-4 sm:col-span-5 text-forest-800 font-semibold bg-forest-50/60 p-2.5 rounded-xl border border-forest-100">
+            100% into craftsmanship, speed, and real results. Zero bloated overhead.
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="grid grid-cols-12 p-5 text-xs sm:text-sm border-b border-cream-200 items-center hover:bg-cream-50/50 transition-colors">
+          <div class="col-span-4 sm:col-span-3 font-bold text-forest-900">
+            Turnaround Speed
+          </div>
+          <div class="col-span-4 sm:col-span-4 text-charcoal-600 pr-2">
+            3 to 6 months of endless review committee meetings and calendar delays.
+          </div>
+          <div class="col-span-4 sm:col-span-5 text-forest-800 font-semibold bg-forest-50/60 p-2.5 rounded-xl border border-forest-100">
+            Quick, focused builds. You sleep in North America and wake up to fresh progress every morning.
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="grid grid-cols-12 p-5 text-xs sm:text-sm items-center hover:bg-cream-50/50 transition-colors">
+          <div class="col-span-4 sm:col-span-3 font-bold text-forest-900">
+            After It's Launched
+          </div>
+          <div class="col-span-4 sm:col-span-4 text-charcoal-600 pr-2">
+            They lock you into \$300/mo contracts, or vanish the moment the final check clears.
+          </div>
+          <div class="col-span-4 sm:col-span-5 text-forest-800 font-semibold bg-forest-50/60 p-2.5 rounded-xl border border-forest-100">
+            You own 100% of your site forever + get 30 days of free "Just text me on WhatsApp" support!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       6. IRRESISTIBLE CLIENT PROMISES ("SWEET PERKS")
+       High-trust hooks specifically designed to eliminate SMB owner fears
+       =================================================================== -->
+  <section id="promises" class="py-20 bg-[#FAF7F0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-forest-700 bg-forest-50 px-3.5 py-1 rounded-full border border-forest-100">
+          My Promises to You
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 tracking-tight">
+          Sweet Perks Included With Every Single Project
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-charcoal-700">
+          Hiring someone halfway across the world shouldn't feel like a leap of faith. Here is how I protect your time and money:
+        </p>
+      </div>
+
+      <!-- Perks Grid -->
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Perk 1 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm flex gap-5 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-mustard-100 text-mustard-600 flex-shrink-0 flex items-center justify-center text-xl font-bold">
+            🎨
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-forest-900">
+              The "Try Before You Buy" Free Homepage Preview
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-charcoal-600 leading-relaxed">
+              Not sure how your new website could look? Message me on WhatsApp with your business name, and I will design a custom preview of your new homepage <strong>before you pay a single dime</strong>. If you love it, we work together. If not, we part as friends!
+            </p>
+          </div>
+        </div>
+
+        <!-- Perk 2 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm flex gap-5 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex-shrink-0 flex items-center justify-center text-xl font-bold">
+            💬
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-forest-900">
+              30 Days of "Just Text Me" Support
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-charcoal-600 leading-relaxed">
+              Most agencies disappear the second you pay your final bill. For the first 30 days after your site goes live, if you want a photo swapped, a price updated, or a typo fixed, just shoot me a quick text on WhatsApp and I’ll take care of it for free.
+            </p>
+          </div>
+        </div>
+
+        <!-- Perk 3 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm flex gap-5 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-forest-100 text-forest-700 flex-shrink-0 flex items-center justify-center text-xl font-bold">
+            🔑
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-forest-900">
+              Zero "Hostage" Fees (100% Ownership)
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-charcoal-600 leading-relaxed">
+              A lot of agencies trap small businesses into \$200-\$300/month contracts just to keep their website online. Not here. Once your website is built and paid for, you own 100% of it forever. No monthly hostage situations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Perk 4 -->
+        <div class="bg-white rounded-3xl p-8 border border-cream-300 shadow-warm flex gap-5 items-start">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex-shrink-0 flex items-center justify-center text-xl font-bold">
+            🎥
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-forest-900">
+              Your Personal 5-Minute Video Tour
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-charcoal-600 leading-relaxed">
+              When your website is finished, I don't just toss you the keys and run. I record a friendly, personal 5-minute video made specifically for you, showing you around your new site so you feel totally confident and in control.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bonus Hook Banner: The Friendly Website Roast -->
+      <div class="mt-10 bg-cream-200/90 border border-mustard-300/70 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-mustard-500 text-white flex-shrink-0 flex items-center justify-center text-2xl shadow">
+            🔥
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-forest-900">
+              Already have a website that isn't bringing in calls?
+            </h4>
+            <p class="text-sm text-charcoal-700 mt-1">
+              Send me your link on WhatsApp. I’ll record a <strong>free 3-minute video roast</strong> showing 3 simple tweaks that will get your phone ringing more.
+            </p>
+          </div>
+        </div>
+        <a href="https://wa.me/1234567890?text=Hi%20Zubair!%20Here%20is%20my%20website%20link.%20Can%20you%20do%20a%20quick%20free%203-minute%20video%20audit%20for%20me?" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="whitespace-nowrap bg-forest-700 hover:bg-forest-800 text-white font-bold text-sm px-6 py-3 rounded-xl shadow transition-colors">
+          Claim My Free 3-Min Roast
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       7. PRICING & WHATSAPP CONTACT SECTION
+       Custom Quotes, Interactive WhatsApp Message Builder
+       =================================================================== -->
+  <section id="pricing" class="py-20 bg-cream-100 border-t border-cream-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-mustard-600 bg-mustard-50 px-3.5 py-1 rounded-full border border-mustard-100">
+          Honest Pricing
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 tracking-tight">
+          How Much Does It Cost?<br>
+          <span class="text-mustard-600">(Spoiler: Less Than You Think)</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-charcoal-700 leading-relaxed">
+          Every business is different. A local bakery doesn't need the same website as a 20-truck plumbing company, and you shouldn't be forced into an overpriced "Gold/Silver/Bronze" agency package full of stuff you will never use.
+        </p>
+        <p class="mt-2 text-sm sm:text-base text-charcoal-600">
+          Instead of slapping random price tags on this page, I build fair, custom quotes around what you actually need and what makes sense for your budget.
+        </p>
+      </div>
+
+      <!-- WhatsApp Interactive Quote Box -->
+      <div class="mt-12 bg-white rounded-3xl p-6 sm:p-10 border border-cream-300 shadow-float">
+        
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 text-3xl mb-4">
+            💬
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-forest-900">
+            Allergic to long contact forms and pushy sales calls?
+          </h3>
+          <p class="mt-3 text-sm sm:text-base text-charcoal-700 leading-relaxed">
+            Me too. Send me a quick message on WhatsApp, tell me what you're dreaming up, and I’ll put together an honest, no-pressure price built around your budget.
+          </p>
+        </div>
+
+        <!-- Interactive Quick Topic Selector -->
+        <div class="mt-8 pt-8 border-t border-cream-200 max-w-xl mx-auto">
+          <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-600 mb-3 text-center">
+            Tap what you're looking for to customize your WhatsApp message:
+          </label>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="topicSelectors">
+            <button type="button" 
+                    data-msg="Hi Zubair! I'm looking for a brand-new custom website built from scratch. Can we chat about pricing?" 
+                    class="topic-btn active text-left px-4 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all duration-200 bg-forest-50 border-forest-600 text-forest-800">
+              🚀 Brand-New Website
+            </button>
+            <button type="button" 
+                    data-msg="Hi Zubair! My current website looks outdated and needs a modern makeover. Can we chat about pricing?" 
+                    class="topic-btn text-left px-4 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all duration-200 bg-white border-cream-300 text-charcoal-700 hover:border-forest-400">
+              ✨ Rescue My Old Website
+            </button>
+            <button type="button" 
+                    data-msg="Hi Zubair! I need simple booking and quote request forms added to my website. Can you give me a ballpark quote?" 
+                    class="topic-btn text-left px-4 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all duration-200 bg-white border-cream-300 text-charcoal-700 hover:border-forest-400">
+              📅 Booking & Quote Forms
+            </button>
+            <button type="button" 
+                    data-msg="Hi Zubair! I would love to claim a Free 3-Minute Friendly Website Roast of my current site." 
+                    class="topic-btn text-left px-4 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition-all duration-200 bg-white border-cream-300 text-charcoal-700 hover:border-forest-400">
+              🔥 Free 3-Minute Website Roast
+            </button>
+          </div>
+
+          <!-- Live WhatsApp Message Preview -->
+          <div class="mt-6 bg-[#EFEAE2] p-4 rounded-2xl border border-cream-300 relative">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-charcoal-500 mb-1 flex items-center justify-between">
+              <span>Preview your pre-filled WhatsApp text:</span>
+              <span class="text-emerald-700 font-semibold">● Ready to send</span>
+            </div>
+            <div id="msgPreview" class="bg-white p-3.5 rounded-xl text-xs sm:text-sm text-charcoal-800 shadow-sm leading-relaxed">
+              Hi Zubair! I'm looking for a brand-new custom website built from scratch. Can we chat about pricing?
+            </div>
+          </div>
+
+          <!-- The Main WhatsApp Action Button -->
+          <div class="mt-6 text-center">
+            <a id="mainWhatsAppBtn" 
+               href="https://wa.me/1234567890?text=Hi%20Zubair!%20I'm%20looking%20for%20a%20brand-new%20custom%20website%20built%20from%20scratch.%20Can%20we%20chat%20about%20pricing?" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>
+              </svg>
+              <span>Message Me on WhatsApp for a Custom Price</span>
+            </a>
+            
+            <p class="mt-3 text-xs text-charcoal-500 font-medium">
+              No hidden fees • No surprise bills • Direct replies within a few hours
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       8. FRIENDLY FAQ SECTION
+       Handling Objections With Humor, Warmth, and Complete Transparency
+       =================================================================== -->
+  <section id="faq" class="py-20 bg-[#FAF7F0]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-forest-700 bg-forest-50 px-3.5 py-1 rounded-full border border-forest-100">
+          Got Questions?
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-forest-900 tracking-tight">
+          Frequently Asked Questions (With Zero Corporate Spin)
+        </h2>
+        <p class="mt-3 text-charcoal-600">
+          Everything you might be wondering before sending that first "Hey!"
+        </p>
+      </div>
+
+      <!-- Accordion Container -->
+      <div class="mt-12 space-y-4" id="faqAccordion">
+        
+        <!-- Question 1 -->
+        <div class="faq-item bg-white rounded-2xl border border-cream-300 overflow-hidden shadow-sm transition-all">
+          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-bold text-forest-900 text-base sm:text-lg focus:outline-none">
+            <span>Wait, you're in Bangladesh—won't the time zone be weird?</span>
+            <span class="faq-icon text-mustard-500 font-extrabold text-xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm sm:text-base text-charcoal-700 leading-relaxed border-t border-cream-100 pt-3">
+            Not at all—in fact, North American clients find it to be an enormous advantage! We have several overlapping hours during your morning and evening to chat comfortably on WhatsApp. Best of all, while you are sleeping at night, I am wide awake building. You wake up with your morning coffee to see fresh updates and checklist items crossed off!
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item bg-white rounded-2xl border border-cream-300 overflow-hidden shadow-sm transition-all">
+          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-bold text-forest-900 text-base sm:text-lg focus:outline-none">
+            <span>Will I understand what you're talking about if I'm not good with computers?</span>
+            <span class="faq-icon text-mustard-500 font-extrabold text-xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm sm:text-base text-charcoal-700 leading-relaxed border-t border-cream-100 pt-3">
+            100% yes! That is my official promise. I never use technical mumbo-jumbo or try to impress you with complicated jargon. We talk in plain, everyday English about your customers, your services, and what will get your phone ringing.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item bg-white rounded-2xl border border-cream-300 overflow-hidden shadow-sm transition-all">
+          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-bold text-forest-900 text-base sm:text-lg focus:outline-none">
+            <span>What happens after the website is finished? Do you vanish?</span>
+            <span class="faq-icon text-mustard-500 font-extrabold text-xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm sm:text-base text-charcoal-700 leading-relaxed border-t border-cream-100 pt-3">
+            Never! I include 30 days of free "Just Text Me" support on WhatsApp for any text tweaks, price adjustments, or photo swaps. Plus, I record a personalized 5-minute video walkthrough showing you exactly how everything works so you never feel lost.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item bg-white rounded-2xl border border-cream-300 overflow-hidden shadow-sm transition-all">
+          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-bold text-forest-900 text-base sm:text-lg focus:outline-none">
+            <span>How do we get started?</span>
+            <span class="faq-icon text-mustard-500 font-extrabold text-xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm sm:text-base text-charcoal-700 leading-relaxed border-t border-cream-100 pt-3">
+            Super simple: just click any of the WhatsApp buttons on this page and say "Hi Zubair!" Tell me what your business does and what you're thinking. No forms, no sales pitches, just two friendly humans talking about how to make your business look great.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item bg-white rounded-2xl border border-cream-300 overflow-hidden shadow-sm transition-all">
+          <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-bold text-forest-900 text-base sm:text-lg focus:outline-none">
+            <span>What if I already own a domain name or have an existing site?</span>
+            <span class="faq-icon text-mustard-500 font-extrabold text-xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-5 text-sm sm:text-base text-charcoal-700 leading-relaxed border-t border-cream-100 pt-3">
+            Great! You keep total ownership of your web address. When the new website is ready, I will connect it smoothly so there is zero downtime for your existing visitors.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================================
+       9. FOOTER
+       Warm sign-off, direct links, and copyright
+       =================================================================== -->
+  <footer class="bg-forest-900 text-white pt-16 pb-12 border-t border-forest-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-forest-800">
+        
+        <!-- Brand column -->
+        <div class="md:col-span-5">
+          <div class="text-2xl font-extrabold tracking-tight text-white">
+            <span class="text-emerald-400">Z</span>ubair<span class="text-mustard-400 font-black">360</span>.
+          </div>
+          <p class="mt-2 text-sm font-script text-mustard-300 text-xl">
+            "Your trusted tech guy on speed dial."
+          </p>
+          <p class="mt-3 text-sm text-cream-300 leading-relaxed max-w-sm">
+            6 years of software engineering experience dedicated to helping North American small businesses look amazing online without the crazy agency price tag.
+          </p>
+        </div>
+
+        <!-- Fast Links -->
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-mustard-400 mb-4">
+            Quick Navigation
+          </h4>
+          <ul class="space-y-2 text-sm text-cream-200">
+            <li><a href="#how-i-help" class="hover:text-white transition-colors">What I Do</a></li>
+            <li><a href="#why-me" class="hover:text-white transition-colors">Why Work With Me?</a></li>
+            <li><a href="#promises" class="hover:text-white transition-colors">Sweet Perks Included</a></li>
+            <li><a href="#pricing" class="hover:text-white transition-colors">Custom Pricing</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="md:col-span-4 bg-forest-800/80 p-6 rounded-2xl border border-forest-700">
+          <h4 class="text-sm font-bold text-white mb-2">
+            Ready to chat about your website?
+          </h4>
+          <p class="text-xs text-cream-300 mb-4">
+            No long contact forms. Just send a quick greeting on WhatsApp and we will take it from there.
+          </p>
+          <a href="https://wa.me/1234567890?text=Hi!%20I%20saw%20your%20website%20and%20would%20love%20to%20chat%20about%20a%20custom%20website." 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 w-full bg-mustard-500 hover:bg-mustard-600 text-forest-900 font-extrabold text-sm py-3 px-4 rounded-xl shadow transition-colors">
+            <span>Message Me on WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream-300 gap-4">
+        <div>
+          © <span id="currentYear"></span> Zubair 360 • Independent Web Studio based in Bangladesh serving USA & Canada.
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="text-emerald-400 font-semibold flex items-center gap-1.5">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Available for new projects
+          </span>
+          <a href="#pricing" class="hover:underline">Get a Custom Quote</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ===================================================================
+       JAVASCRIPT: INTERACTIVE FEATURES
+       - Mobile Menu Toggle
+       - Live Dual Timezone Clock (US Eastern & Dhaka, BD)
+       - Interactive WhatsApp Message & Pre-filled URL Generator
+       - FAQ Accordion
+       - WhatsApp Phone Number Central Configuration
+       =================================================================== -->
+  <script>
+    // ==========================================
+    // 1. EASY CONFIGURATION: YOUR WHATSAPP NUMBER
+    // Replace '1234567890' with your actual number (e.g. '88017XXXXXXXX')
+    // All WhatsApp buttons on the site will automatically use this!
+    // ==========================================
+    const WHATSAPP_PHONE_NUMBER = "1234567890";
+
+    // Set Copyright Year dynamically
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // 2. MOBILE MENU TOGGLE
+    // ==========================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOpenIcon = document.getElementById('menuOpenIcon');
+    const menuCloseIcon = document.getElementById('menuCloseIcon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        menuOpenIcon.classList.toggle('hidden', !isHidden);
+        menuCloseIcon.classList.toggle('hidden', isHidden);
+      });
+
+      // Close menu when a link is clicked
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuOpenIcon.classList.remove('hidden');
+          menuCloseIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    // ==========================================
+    // 3. LIVE DUAL TIMEZONE CLOCK
+    // Displays US Eastern Time (North America) and Dhaka, BD Time
+    // ==========================================
+    function updateClocks() {
+      const usClockEl = document.getElementById('usClock');
+      const bdClockEl = document.getElementById('bdClock');
+
+      if (usClockEl && bdClockEl) {
+        const now = new Date();
+
+        // US Eastern Time
+        const usTimeStr = now.toLocaleTimeString('en-US', {
+          timeZone: 'America/New_York',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+        usClockEl.textContent = usTimeStr;
+
+        // Dhaka, Bangladesh Time
+        const bdTimeStr = now.toLocaleTimeString('en-US', {
+          timeZone: 'Asia/Dhaka',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        });
+        bdClockEl.textContent = bdTimeStr;
+      }
+    }
+    updateClocks();
+    setInterval(updateClocks, 1000);
+
+    // ==========================================
+    // 4. INTERACTIVE WHATSAPP TOPIC SELECTOR
+    // ==========================================
+    const topicButtons = document.querySelectorAll('.topic-btn');
+    const msgPreview = document.getElementById('msgPreview');
+    const mainWhatsAppBtn = document.getElementById('mainWhatsAppBtn');
+
+    topicButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active styling
+        topicButtons.forEach(b => {
+          b.classList.remove('bg-forest-50', 'border-forest-600', 'text-forest-800');
+          b.classList.add('bg-white', 'border-cream-300', 'text-charcoal-700');
+        });
+        btn.classList.add('bg-forest-50', 'border-forest-600', 'text-forest-800');
+        btn.classList.remove('bg-white', 'border-cream-300', 'text-charcoal-700');
+
+        // Update preview text and WhatsApp link
+        const messageText = btn.getAttribute('data-msg');
+        msgPreview.textContent = messageText;
+        const encoded = encodeURIComponent(messageText);
+        mainWhatsAppBtn.href = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encoded}`;
+      });
+    });
+
+    // ==========================================
+    // 5. FAQ ACCORDION
+    // ==========================================
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const isCurrentlyHidden = content.classList.contains('hidden');
+
+        // Close other FAQs
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.querySelector('.faq-content').classList.add('hidden');
+          other.querySelector('.faq-icon').textContent = '+';
+          other.querySelector('.faq-icon').classList.remove('rotate-45');
+        });
+
+        if (isCurrentlyHidden) {
+          content.classList.remove('hidden');
+          icon.textContent = '−';
+          item.classList.add('border-forest-400');
+        } else {
+          item.classList.remove('border-forest-400');
+        }
+      });
+    });
+
+    // Ensure all static WhatsApp links use WHATSAPP_PHONE_NUMBER
+    document.querySelectorAll('a[href*="wa.me/+8801302827082"]').forEach(link => {
+      if (WHATSAPP_PHONE_NUMBER !== "+8801302827082") {
+        link.href = link.href.replace("+8801302827082", WHATSAPP_PHONE_NUMBER);
+      }
+    });
+  </script>
+</body>
+</html>
